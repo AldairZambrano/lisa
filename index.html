@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lisa</title>
+</head>
+<style>
+    body{
+        background-color: #000;
+    }
+    h1{
+        text-align: center;
+    color: aqua;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 45px;
+    }
+</style>
+<body>
+    <textarea></textarea>
+    <button>voz</button>
+    <script>
+        const btn = document.querySelector('button');
+        const inputText = document.querySelector('textarea');
+
+        btn.addEventListener("click", () =>{
+            let utterance = new SpeechSynthesisUtterance(inputText.value);
+            speechSynthesis.speak(utterance);
+        })
+    </script>
+
+</body>
+</html>
